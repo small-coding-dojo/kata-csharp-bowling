@@ -15,4 +15,15 @@ public class BowlingGameTest
     {
         Assert.Equal(BowlingGame.Evaluate("1- 1- 1- 1- 1- 1- 1- 1- 1- 1-"), 10);
     }
+
+    [Fact]
+    public void SplitsALineIntoRolls()
+    {
+        var line = "1- 1- 1- 1- 1- 1- 1- 1- 1- 1-";
+
+        Assert.Equal(
+            BowlingGame.GetRollsFrom(line),
+            new[] { (1, 0), (1, 0), (1, 0), (1, 0), (1, 0), (1, 0), (1, 0), (1, 0), (1, 0), (1, 0) }
+        );
+    }
 }

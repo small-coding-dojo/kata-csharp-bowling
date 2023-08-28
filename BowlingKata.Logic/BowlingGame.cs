@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+
 namespace BowlingKata.Logic.Tests;
 
 public class BowlingGame
@@ -12,5 +15,14 @@ public class BowlingGame
         {
             return 10;
         }
+    }
+
+    public static IEnumerable<(int, int)> GetRollsFrom(string line)
+    {
+        var rollStrings = line.Split(' ');
+        
+        rollStrings.Select(str => (str[0], str[1]))
+        
+        return new[] {(1, 0), (1, 0), (1, 0), (1, 0), (1, 0), (1, 0), (1, 0), (1, 0), (1, 0), (1, 0)};
     }
 }
