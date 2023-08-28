@@ -20,7 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\DotnetStarter.Logic\DotnetStarter.Logic.csproj" />
+        <ProjectReference Include="..\BowlingKata.Logic\BowlingKata.Logic.csproj" />
     </ItemGroup>
 
 </Project>

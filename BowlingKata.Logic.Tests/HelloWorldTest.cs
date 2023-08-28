@@ -1,6 +1,6 @@
 using Xunit;
 
-namespace DotnetStarter.Logic.Tests;
+namespace BowlingKata.Logic.Tests;
 
 public class HelloWorldTest
 {

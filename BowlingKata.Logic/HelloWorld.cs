@@ -1,4 +1,4 @@
-namespace DotnetStarter.Logic;
+namespace BowlingKata.Logic;
 
 public class HelloWorld
 {
