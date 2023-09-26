@@ -7,11 +7,16 @@ public class BowlingGameTest
     [Fact]
     public void GameWithZerosReturnsZero() => Assert.Equal(0, BowlingGame.Game("-- -- -- -- -- -- -- -- -- --"));
 
-    [Fact]
-    public void GameWithOnePinInFirstThrowReturnsOne() => Assert.Equal(1, BowlingGame.Game("1- -- -- -- -- -- -- -- -- --"));
-
-
-    [Fact]
-    public void GameWithTwoPinsInFirstThrowReturnsTwo() => Assert.Equal(2, BowlingGame.Game("2- -- -- -- -- -- -- -- -- --"));
-
+    [Theory]
+    [InlineData(1)]
+    [InlineData(2)]
+    [InlineData(3)]
+    [InlineData(4)]
+    [InlineData(5)]
+    [InlineData(6)]
+    [InlineData(7)]
+    [InlineData(8)]
+    [InlineData(9)]
+    public void GameWithHitPinsInFirstThrowReturnsCorrespondingResult(int hitPins) =>
+        Assert.Equal(hitPins, BowlingGame.Game($"{hitPins}- -- -- -- -- -- -- -- -- --"));
 }

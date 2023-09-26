@@ -8,11 +8,7 @@ public class BowlingGame
         {
             return 0;
         }
-        if (line[0] == '2')
-        {
-            return 2;
-        }
-
-        return 1;
+        
+        return int.Parse(line[0].ToString());
     }
 }
