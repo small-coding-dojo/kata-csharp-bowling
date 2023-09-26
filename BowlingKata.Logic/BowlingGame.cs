@@ -4,11 +4,22 @@ public class BowlingGame
 {
     public static int Game(string line)
     {
-        if (line[0] == '-')
+        var secondThrow = line[1];
+        if (secondThrow == '1')
+        {
+            return ThrowToPoints(secondThrow);
+        }
+
+        var firstThrow = line[0];
+        return ThrowToPoints(firstThrow);
+    }
+
+    private static int ThrowToPoints(char pinsAsChar)
+    {
+        if (pinsAsChar == '-')
         {
             return 0;
         }
-        
-        return int.Parse(line[0].ToString());
+        return int.Parse(pinsAsChar.ToString());
     }
 }
