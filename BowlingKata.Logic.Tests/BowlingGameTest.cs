@@ -32,4 +32,9 @@ public class BowlingGameTest
     [InlineData(9)]
     public void GameWithHitPinsInSecondThrowReturnsCorrespondingResult(int hitPins) =>
         Assert.Equal(hitPins, BowlingGame.Game($"-{hitPins} -- -- -- -- -- -- -- -- --"));
+
+    [Theory]
+    [InlineData(1)]
+    public void GameWithSameHitPinsInFirstTwoThrowsReturnsAddedResult(int hitPins) =>
+        Assert.Equal(hitPins + hitPins, BowlingGame.Game($"{hitPins}{hitPins} -- -- -- -- -- -- -- -- --"));
 }
