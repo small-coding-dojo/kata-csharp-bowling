@@ -4,13 +4,14 @@ public class BowlingGame
 {
     public static int Game(string line)
     {
+        var firstThrow = line[0];
         var secondThrow = line[1];
-        if (secondThrow == '1')
+
+        if (firstThrow == '-')
         {
             return ThrowToPoints(secondThrow);
         }
 
-        var firstThrow = line[0];
         return ThrowToPoints(firstThrow);
     }
 
