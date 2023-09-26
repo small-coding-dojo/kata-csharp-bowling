@@ -7,12 +7,7 @@ public class BowlingGame
         var firstThrow = line[0];
         var secondThrow = line[1];
 
-        if (firstThrow == '-')
-        {
-            return ThrowToPoints(secondThrow);
-        }
-
-        return ThrowToPoints(firstThrow);
+        return ThrowToPoints(firstThrow) + ThrowToPoints(secondThrow);
     }
 
     private static int ThrowToPoints(char pinsAsChar)
@@ -21,6 +16,7 @@ public class BowlingGame
         {
             return 0;
         }
+
         return int.Parse(pinsAsChar.ToString());
     }
 }
